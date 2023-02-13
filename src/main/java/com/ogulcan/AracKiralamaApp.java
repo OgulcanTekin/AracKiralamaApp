@@ -42,12 +42,7 @@ public class AracKiralamaApp {
                     break;
                 case 5: rapor();
                     break;
-                case 6 :new AracController().bostaOlanAraclar();
-                    break;
-                case 7: new AracController().kiradaOlanAraclar();
-                    break;
-                case 8: new KiralamaController().herhangiMusterininKiraladigiAraclar();
-                break;
+
             }
         }while(secim!=0);
         System.out.println("YINE BEKLERIZ....");
@@ -57,6 +52,11 @@ public class AracKiralamaApp {
         Scanner scanner=new Scanner(System.in);
         int secim=0;
         do {
+            System.out.println("Lütfen secim yapın ---->");
+            System.out.println("1- Bosta Olan Araclar");
+            System.out.println("2- Kirada Olan Araclar");
+            System.out.println("3- Herhangi bir musterinin kiraladigi araclar");
+            System.out.println("0- Ana Menuye don");
             secim= scanner.nextInt();
             switch (secim) {
                 case 1:

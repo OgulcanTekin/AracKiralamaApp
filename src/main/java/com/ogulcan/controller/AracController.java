@@ -56,7 +56,7 @@ public class AracController {
     public List<Arac> araclariGoster() {
         return aracService.findAll();
     }
-    public void bostaOlanAraclar(){
+    public void kiradaOlanAraclar(){
         System.out.println("Bosta olan araclar...:");
         /**
          * default durumda arac kiralanmıs gozukuyor !!!!!
@@ -67,7 +67,7 @@ public class AracController {
             }
         });
     }
-    public void kiradaOlanAraclar() {
+    public void bostaOlanAraclar() {
         System.out.println("Kirada olan araclar...: ");
 
         // Aracın state durumu default true
