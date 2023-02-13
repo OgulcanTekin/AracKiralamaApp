@@ -56,18 +56,18 @@ public class AracController {
     public List<Arac> araclariGoster() {
         return aracService.findAll();
     }
-    public void kiradaOlanAraclar(){
-        System.out.println("Bosta olan araclar...:");
+    public void bostaOlanAraclar(){
+        System.out.println("Boşta olan araclar...:");
         /**
          * default durumda arac kiralanmıs gozukuyor !!!!!
          */
         aracService.findAll().forEach(x->{
-            if (x.isState()){
+            if (!x.isState()){
                 System.out.println(x.getMarka()+" "+x.getModel());
             }
         });
     }
-    public void bostaOlanAraclar() {
+    public void kiradaOlanAraclar() {
         System.out.println("Kirada olan araclar...: ");
 
         // Aracın state durumu default true
@@ -76,7 +76,7 @@ public class AracController {
          */
 
         aracService.findAll().forEach(x -> {
-            if (!x.isState())
+            if (x.isState())
                 System.out.println(x.getMarka() + " " + x.getModel());
         });
     }
